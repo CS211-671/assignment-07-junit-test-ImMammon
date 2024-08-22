@@ -1,15 +1,26 @@
 package ku.cs.models;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserListTest {
+    UserList users;
+
+    @BeforeEach
+    void init(){
+        users = new UserList();
+        users.addUser("user01", "password01");
+        users.addUser("user02", "password02");
+        users.addUser("user03", "password03");
+    }
 
     @Test
     @DisplayName("User should be found in UserList")
     public void testUserListFindUser() {
+
         // TODO: add 3 users to UserList
 
         // TODO: find one of them
